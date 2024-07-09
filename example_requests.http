@@ -1,0 +1,26 @@
+### Mine a new block
+GET http://127.0.0.1:5000/mine
+
+### Add a new transaction
+POST http://127.0.0.1:5000/transactions/new
+Content-Type: application/json
+
+{
+    "sender": "address1",
+    "recipient": "address2",
+    "amount": 5
+}
+
+### Get the full blockchain
+GET http://127.0.0.1:5000/chain
+
+### Register a new node
+POST http://127.0.0.1:5000/nodes/register
+Content-Type: application/json
+
+{
+    "nodes": ["http://127.0.0.1:5001"]
+}
+
+### Resolve conflicts
+GET http://127.0.0.1:5000/nodes/resolve
